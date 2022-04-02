@@ -23,6 +23,26 @@ router.get("/", async (req, res) => {
     }
 });
 
+router.get("/find", async (req, res) => {
+    try {
+        var {name} = req.query
+        var sear = `select * from Players where concat(first_name, " ", last_name) like "%${name}%";`
+        var main = await new Promise((resolve, reject) => {
+            const query = sear;
+            db.query(query, (err, result) => {
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve(result);
+                }
+            });
+        });
+        res.status(200).send(main);
+    } catch (err) {
+        res.status(400).send(err.message);
+    }
+});
+
 // Insert player
 router.post("/", async (req, res) => {
     try {
