@@ -9,6 +9,11 @@ const createTable = require("./createtable");
 const routes = [
     "players",
     "teams",
+    "league_type",
+    "league",
+    "team_rankings",
+    "plays",
+    "matches"
 ];
 
 app.use(cors());
