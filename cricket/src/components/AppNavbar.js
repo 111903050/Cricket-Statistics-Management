@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import HomePage from './HomePage';
 import './Styles.css'
+
 import {
     Collapse,
     Navbar,
@@ -11,6 +12,9 @@ import {
     NavItem,
     Container
 } from 'reactstrap';
+
+import AddPlayer from './AddPlayer';
+import AddTeam from './AddTeam';
 
 class AppNavbar extends Component {
 
