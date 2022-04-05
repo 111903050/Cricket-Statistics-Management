@@ -81,29 +81,5 @@ router.post("/", async (req, res) => {
     }
 });
 
-router.post("/multiple", async (req, res) => {
-    try {
-        var { data } = req.body;
-        var main = await Promise.all(
-            data.map(async (item) => {
-                var { team_id, league_id, ranks, points } = item;
-                var main = await new Promise((resolve, reject) => {
-                    var query = `INSERT INTO Team_Rankings VALUES (${team_id}, ${league_id}, ${ranks}, ${points})`;
-                    db.query(query, (err, result) => {
-                        if (err) {
-                            reject(err);
-                        } else {
-                            resolve(result);
-                        }
-                    });
-                });
-                return main;
-            })
-        );
-        res.status(200).send("Multiple team rankings added");
-    } catch (err) {
-        res.status(400).send(err.message);
-    }
-});
 
 module.exports = router;

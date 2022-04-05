@@ -141,37 +141,5 @@ router.post("/", async (req, res) => {
     }
 });
 
-router.post("/multiple", async (req, res) => {
-    try {
-        const { data } = req.body;
-        var main = await Promise.all(
-            data.map(async (item) => {
-                const {
-                    league_id,
-                    match_number,
-                    match_date,
-                    team1,
-                    team2,
-                    won_by,
-                } = item;
-                var query = `INSERT INTO Matches (league_id, match_number, match_date, team1, team2, won_by) VALUES \
-                (${league_id}, ${match_number}, "${match_date}", ${team1}, ${team2}, ${won_by});
-                `;
-                await new Promise((resolve, reject) => {
-                    db.query(query, (err, result) => {
-                        if (err) {
-                            console.log(err.message);
-                            reject(err.message);
-                        }
-                        resolve(result);
-                    });
-                });
-            })
-        );
-        res.status(200).send("Multiple matches added");
-    } catch (err) {
-        res.status(400).send(err);
-    }
-});
 
 module.exports = router;

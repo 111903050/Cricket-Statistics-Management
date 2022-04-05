@@ -13,8 +13,13 @@ import {
     Container
 } from 'reactstrap';
 
+import Search from '../Search';
+import League_Seasons from './League_Seasons';
+import Season_Details from './Season_Details';
 import AddPlayer from './AddPlayer';
 import AddTeam from './AddTeam';
+import TeamDetails from './TeamDetails';
+import Team_Seasons from './Team_Seasons';
 
 class AppNavbar extends Component {
 
