@@ -5,7 +5,8 @@ class HomePage extends Component {
     render(){
         return(
             <Container className="toplookout">
-            
+                <Match />
+                <LeaguePage />
             </Container>
         )
     }
