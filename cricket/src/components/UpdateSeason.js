@@ -90,16 +90,6 @@ class AddSeason extends Component {
         this.setState({
             modal: false,
         });
-        // this.setState({
-        //     modal: false,
-        //     season: 0,
-        //     startdate: "",
-        //     enddate: "",
-        //     number_of_teams: "",
-        //     country: "",
-        //     winner: "",
-        //     winner_id: 0,
-        // });
     };
 
     compareObjects(object1, object2, key) {
