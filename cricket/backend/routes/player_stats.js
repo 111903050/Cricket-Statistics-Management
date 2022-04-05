@@ -2,7 +2,7 @@ const router = require("express").Router();
 const mysql = require("mysql");
 const config = require("../config");
 
-const db = mysql.createPool(config.mysql);
+const db = mysql.createConnection(config.mysql);
 
 router.post("/", async (req, res) => {
     try {

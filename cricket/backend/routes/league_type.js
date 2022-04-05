@@ -2,7 +2,7 @@ const mysql = require("mysql");
 const config = require("../config");
 const router = require("express").Router();
 
-const db = mysql.createPool(config.mysql);
+const db = mysql.createConnection(config.mysql);
 
 router.get("/", (req, res) => {
     var query = "SELECT * from League_Type";
