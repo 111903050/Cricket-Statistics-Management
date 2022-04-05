@@ -105,4 +105,23 @@ router.get("/:team_id", async (req, res) => {
     }
 });
 
+// Get players according to player_role
+router.get("/role/:role", async (req, res) => {
+    try {
+        const role = req.params.role;
+        var query = `SELECT * FROM Players WHERE player_role="${role}"`;
+        var main = await new Promise((resolve, reject) => {
+            db.query(query, (err, result) => {
+                if (err) {
+                    reject(err);
+                }
+                resolve(result);
+            });
+        });
+        res.status(200).send(main);
+    } catch (err) {
+        res.status(400).send(err.message);
+    }
+});
+
 module.exports = router;
