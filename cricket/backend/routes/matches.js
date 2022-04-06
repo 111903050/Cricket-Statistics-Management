@@ -1,8 +1,7 @@
 const router = require("express").Router();
 const mysql = require("mysql");
-const config = require("../config");
+const db = require("../config");
 
-const db = mysql.createConnection(config.mysql);
 // Get All Matches
 router.get("/all", async (req, res) => {
     try {

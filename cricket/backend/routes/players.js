@@ -1,8 +1,6 @@
 const router = require("express").Router();
 const mysql = require("mysql");
-const config = require("../config");
-
-const db = mysql.createConnection(config.mysql);
+const db = require("../config");
 
 // To get all the players
 router.get("/", async (req, res) => {
