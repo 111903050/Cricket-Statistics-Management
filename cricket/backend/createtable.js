@@ -1,7 +1,6 @@
 const { query } = require("express");
 const mysql = require("mysql");
-const config = require("./config");
-var db = mysql.createPool(config.mysql);
+const db = require("./config");
 
 var playersQuery = `CREATE TABLE IF NOT EXISTS Players
 (

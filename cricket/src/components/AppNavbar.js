@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import HomePage from './HomePage';
 import './Styles.css'
 
@@ -61,14 +61,14 @@ class AppNavbar extends Component {
                         </Collapse>
                     </Container>
                 </Navbar>
-                <Switch>  
+                <Routes>  
                     <Route path="/Search" exact component={Search}/>
                     <Route path="/Search/:team_name" component={Team_Seasons}/>  
                     <Route path="/" exact component={HomePage}/>
                     <Route path="/:league" exact component={League_Seasons}/>
                     <Route path={`/:league/:season`} exact component={Season_Details}/>
                     <Route path={`/:league/:season/:team`} component={TeamDetails}/>                             
-                </Switch>                                 
+                </Routes>                                 
             </Router>
         )
     }

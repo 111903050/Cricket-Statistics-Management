@@ -91,10 +91,10 @@ class Search extends Component {
                             </Col>
                             <Col lg={1}>
                             <Row>
-                            <CustomInput type="switch" id="Players" name="customSwitch" label="Players" onChange={(e) => this.applyfilter("players", e)} checked={this.state.is_player}/>
+                            <Input type="switch" id="Players" name="customSwitch" label="Players" onChange={(e) => this.applyfilter("players", e)} checked={this.state.is_player}/>
                             </Row>
                             <Row>
-                            <CustomInput type="switch" id="Teams" name="customSwitch" label="Teams" onChange={(e) => this.applyfilter("teams", e)} checked={this.state.is_team}/>
+                            <Input type="switch" id="Teams" name="customSwitch" label="Teams" onChange={(e) => this.applyfilter("teams", e)} checked={this.state.is_team}/>
                             </Row>
                             </Col>
 
