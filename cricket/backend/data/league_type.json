@@ -1,0 +1,12 @@
+[
+    {
+        "league_format": "T20",
+        "league_name": "IPL (Indian Premier League)",
+        "league_logo_link": "https://static.toiimg.com/photo/msid-77659752/77659752.jpg"
+    },
+    {
+        "league_format": "T20",
+        "league_name": "BBL (Big Bash League)",
+        "league_logo_link": "https://upload.wikimedia.org/wikipedia/en/c/c0/Big_Bash_League_%28logo%29.png"
+    }    
+]
