@@ -9,7 +9,7 @@
 
 ## Project Statement
 
-CricStats is an application to store, retrieve and display the cricket stats. In this application, user can view and analyze statistics of a particular player or team from any league.
+Cricket Statistics Managemnet is an application to store, retrieve and display the cricket stats. In this application, user can view and analyze statistics of a particular player or team from any league.
 
 
 
